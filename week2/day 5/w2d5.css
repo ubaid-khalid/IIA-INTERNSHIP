@@ -1,0 +1,242 @@
+/* style.css — separate CSS file */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: #f6f9fc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+#app {
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px -12px rgba(0, 20, 30, 0.2);
+  padding: 2rem 2rem 1.5rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eef3f8;
+  padding-bottom: 0.75rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0b2b3d;
+  letter-spacing: -0.01em;
+}
+
+.subhead {
+  color: #3f5e6f;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  letter-spacing: 0.3px;
+  background: #eef6fa;
+  display: inline-block;
+  padding: 0.15rem 1rem;
+  border-radius: 30px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.4rem 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 20, 30, 0.06);
+  border: 1px solid #e1ebf2;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px -8px rgba(0, 40, 60, 0.08);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a3a4b;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card p {
+  color: #2a4b5e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.output-box {
+  background: #f2f8fd;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  min-height: 4rem;
+  border: 1px solid #dae8f0;
+  font-size: 0.95rem;
+  color: #0e2e3e;
+  margin: 0.5rem 0 1rem;
+  transition: background 0.15s;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.highlight-target {
+  background: #fef5e7;
+  border-color: #f5d6b3;
+  font-weight: 500;
+}
+
+/* buttons */
+.btn {
+  border: none;
+  border-radius: 40px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #e4edf4;
+  color: #1a3a4b;
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  background: #1c4d66;
+  color: white;
+}
+.btn.primary:hover {
+  background: #123b50;
+  transform: scale(0.97);
+}
+
+.btn.secondary {
+  background: #d7e4ed;
+  color: #0b2b3d;
+}
+.btn.secondary:hover {
+  background: #c0d3e0;
+}
+
+.btn.success {
+  background: #1e7b5c;
+  color: white;
+}
+.btn.success:hover {
+  background: #15644a;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #b8cedb;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+}
+.btn.ghost:hover {
+  background: #eaf1f7;
+}
+
+/* planning list */
+.plan-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.plan-list li {
+  padding: 0.5rem 0.3rem 0.5rem 1.8rem;
+  background: #f5faff;
+  margin-bottom: 0.3rem;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.1s;
+  border: 1px solid #e1ecf5;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+}
+.plan-list li::before {
+  content: "⬜";
+  position: absolute;
+  left: 0.3rem;
+  font-size: 1.1rem;
+}
+.plan-list li.done {
+  background: #dff0e6;
+  border-color: #aac9b9;
+  text-decoration: line-through 1px #2b6a4e;
+  color: #1c4d3a;
+}
+.plan-list li.done::before {
+  content: "✅";
+}
+
+.plan-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #2c5368;
+}
+
+#progress-text {
+  font-weight: 500;
+  background: #e6f0f7;
+  padding: 0.2rem 1rem;
+  border-radius: 30px;
+}
+
+/* test report */
+.test-report {
+  background: #f3f8fc;
+  min-height: 4rem;
+  border-color: #cbdbe7;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+.test-idle {
+  color: #4d6f82;
+}
+
+.footer-note {
+  margin-top: 2.2rem;
+  text-align: center;
+  color: #6c8b9c;
+  font-size: 0.85rem;
+  border-top: 1px solid #e3eef6;
+  padding-top: 1.2rem;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  #app { padding: 1.5rem; }
+  header h1 { font-size: 1.8rem; }
+  .card-grid { gap: 1.2rem; }
+}

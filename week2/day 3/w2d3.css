@@ -1,0 +1,323 @@
+/* style.css – professional dark theme */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(ellipse at 20% 30%, #0d1b2a, #070e1a);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    padding: 1.8rem;
+}
+
+.app {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(18, 30, 51, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 3.2rem;
+    padding: 2.8rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 40px 70px -25px #000000cc, inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: all 0.2s;
+}
+
+/* ----- HEADER ----- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 2.4rem;
+}
+
+.header-left h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #e8efff, #9bb3f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header-left .tagline {
+    color: #7a8fc7;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 0.15rem;
+    border-left: 3px solid #4f71d9;
+    padding-left: 1rem;
+    opacity: 0.8;
+}
+
+.badge {
+    background: #1f3157;
+    padding: 0.4rem 1.2rem;
+    border-radius: 40px;
+    color: #b7ccff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    border: 1px solid #314879;
+    white-space: nowrap;
+}
+
+/* ----- GRID ----- */
+.loop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    margin-bottom: 2.2rem;
+}
+
+@media (max-width: 700px) {
+    .app {
+        padding: 1.8rem;
+    }
+    .loop-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .header-left h1 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ----- LOOP CARDS ----- */
+.loop-card {
+    background: rgba(10, 20, 38, 0.55);
+    border-radius: 2rem;
+    padding: 1.5rem 1.6rem 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 4px 18px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.2s;
+}
+
+.loop-card:hover {
+    border-color: rgba(110, 150, 255, 0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.7rem;
+}
+
+.card-header .icon {
+    font-size: 1.2rem;
+}
+
+.card-header h2 {
+    color: #d0ddff;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-header .chip {
+    background: #1f3157;
+    font-size: 0.6rem;
+    border-radius: 30px;
+    padding: 0.2rem 0.8rem;
+    color: #a1b9f0;
+    margin-left: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* ----- BUTTONS ----- */
+.btn-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn {
+    background: #28375a;
+    border: none;
+    color: #eef4ff;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.55rem 1.2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    box-shadow: 0 6px 12px -6px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-primary {
+    background: #3f5fcf;
+    box-shadow: 0 6px 14px -4px #1f3a8a50;
+}
+.btn-primary:hover {
+    background: #5270e6;
+    transform: scale(0.97);
+}
+
+.btn-secondary {
+    background: #2b3d64;
+}
+.btn-secondary:hover {
+    background: #3e5582;
+    transform: scale(0.97);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #4a62a0;
+    color: #b0c6f5;
+}
+.btn-outline:hover {
+    background: #1f2f50;
+    border-color: #6a85cf;
+}
+
+/* ----- OUTPUT PANEL ----- */
+.output-panel {
+    background: #0a1226;
+    border-radius: 1.4rem;
+    padding: 0.8rem 1.2rem;
+    font-family: 'Inter', monospace;
+    font-size: 0.9rem;
+    color: #b7cbff;
+    border: 1px solid #1a284a;
+    min-height: 3rem;
+    word-break: break-word;
+    line-height: 1.6;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.output-panel .highlight {
+    color: #ffd966;
+    font-weight: 500;
+}
+
+.output-panel .placeholder {
+    color: #4f6797;
+    font-style: italic;
+}
+
+/* ----- INLINE FORM ----- */
+.inline-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.inline-form input {
+    flex: 1;
+    min-width: 100px;
+    background: #0a1226;
+    border: 1px solid #1f3157;
+    border-radius: 40px;
+    padding: 0.5rem 1.2rem;
+    color: #d0ddff;
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+    transition: 0.15s;
+}
+
+.inline-form input:focus {
+    border-color: #5f7ce0;
+    box-shadow: 0 0 0 3px #2f4a9a40;
+}
+
+.inline-form input::placeholder {
+    color: #4f6797;
+}
+
+/* ----- COUNTER SECTION ----- */
+.counter-section {
+    background: linear-gradient(145deg, #0f1c33, #091121);
+    border-radius: 2rem;
+    padding: 1.6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid #1f3157;
+    box-shadow: 0 8px 24px -8px #00000070;
+    margin-top: 0.6rem;
+}
+
+.counter-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.counter-label {
+    color: #7a8fc7;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.counter-value {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+}
+
+.counter-value #counterDisplay {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #e8efff, #9bb3f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    min-width: 3.5rem;
+}
+
+.counter-unit {
+    color: #6c82b5;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.counter-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.counter-actions .btn {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+}
+
+/* ----- FOOTER ----- */
+.footer-note {
+    margin-top: 1.2rem;
+    text-align: right;
+    color: #3e5582;
+    font-size: 0.7rem;
+    letter-spacing: 0.4px;
+    border-top: 1px solid #17243f;
+    padding-top: 1rem;
+}

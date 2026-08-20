@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox & Forms Demo</title>
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ========== NAVBAR (Flexbox) ========== -->
+    <nav class="navbar">
+        <div class="logo">✦ FlexForm</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== MAIN CONTAINER (Flexbox) ========== -->
+    <div class="container">
+
+        <!-- ===== FORM CARD ===== -->
+        <section class="card">
+            <h2>Get in touch</h2>
+            <p class="subtitle">We'd love to hear from you.</p>
+
+            <form>
+                <!-- Text & Email -->
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="e.g. Alex Rivera" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="alex@example.com" />
+                </div>
+
+                <!-- Select dropdown -->
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <select id="topic">
+                        <option value="">Select a topic…</option>
+                        <option value="general">General inquiry</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+
+                <!-- Checkboxes (Flexbox) -->
+                <div class="form-group">
+                    <label>Interests</label>
+                    <div class="check-group">
+                        <label><input type="checkbox" value="html" /> HTML</label>
+                        <label><input type="checkbox" value="css" /> CSS</label>
+                        <label><input type="checkbox" value="js" /> JavaScript</label>
+                    </div>
+                </div>
+
+                <!-- Radio buttons (Flexbox) -->
+                <div class="form-group">
+                    <label>How did you hear about us?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="hear" value="social" /> Social</label>
+                        <label><input type="radio" name="hear" value="friend" /> Friend</label>
+                        <label><input type="radio" name="hear" value="other" /> Other</label>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- ===== FLEXBOX DEMO CARD ===== -->
+        <aside class="flex-demo-card">
+            <h3>Flexbox in action</h3>
+            <p><code>justify-content: center</code> + <code>align-items: center</code></p>
+
+            <!-- Flex container demo -->
+            <div class="flex-box">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+
+            <div class="note">
+                ⚡ The items above are centered both horizontally and vertically.
+            </div>
+
+            <hr />
+
+            <p class="demo-note">
+                <strong>Navbar</strong> uses <code>justify-content: space-between</code>
+                and <code>align-items: center</code>.
+            </p>
+        </aside>
+
+    </div>
+    <!-- end container -->
+
+</body>
+</html>
