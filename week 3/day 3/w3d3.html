@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 Day 3 - Functional Task & Data Manager</title>
+  <link rel="stylesheet" href="w3d3.css">
+</head>
+<body>
+
+  <!-- Semantic Header Structure -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <h1 class="logo-title">DevDash Task Hub</h1>
+        <span class="logo-sub">Week 3 • Day 3 Interactive Project</span>
+      </div>
+    </div>
+    <div class="user-profile">
+      <div class="avatar">UK</div>
+      <div class="user-info">
+        <span class="user-name">Ubaid Khalid</span>
+        <span class="user-role">Intern Developer</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="main-content">
+
+    <!-- Top Grid: Interactive Analytics Dashboard & Add Task Form -->
+    <div class="top-grid">
+
+      <!-- Real-time Analytics Dashboard -->
+      <section class="card analytics-card">
+        <div class="card-header">
+          <h2>📊 Real-time Dashboard</h2>
+          <span class="badge badge-accent">Live Array Computed</span>
+        </div>
+        <p class="card-desc">Metrics auto-update via Array reduction & object manipulation.</p>
+        
+        <div id="stats-container" class="stats-grid">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+
+      <!-- Add New Task Form (Data Manipulation) -->
+      <section class="card form-card">
+        <div class="card-header">
+          <h2>➕ Add New Task</h2>
+          <span class="badge badge-blue">Object Creation</span>
+        </div>
+        
+        <form id="add-task-form" class="task-form">
+          <div class="form-group">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" placeholder="e.g. Refactor array methods..." required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="high">🔥 High</option>
+                <option value="normal" selected>⚡ Normal</option>
+                <option value="low">🌱 Low</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="task-assignee">Assignee</label>
+              <select id="task-assignee">
+                <option value="Ubaid Khalid">Ubaid Khalid (Intern)</option>
+                <option value="Usama Qazi">Usama Qazi (Trainer)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="task-tags">Tags (Comma Separated)</label>
+            <input type="text" id="task-tags" placeholder="CSS, Media Queries, ES6" value="JS, Array" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Add Task to Data Array</button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- Interactive Data Controls & Filtering (Array Methods) -->
+    <section class="card controls-card">
+      <div class="card-header">
+        <h2>🛠️ Array Methods Workbench</h2>
+        <span class="badge badge-purple">Array Methods in Action</span>
+      </div>
+
+      <div class="controls-wrapper">
+        <!-- Filter Buttons (filter()) -->
+        <div class="control-group">
+          <span class="control-label">Filter Tasks (filter()):</span>
+          <div class="btn-group">
+            <button id="btn-filter-all" class="btn btn-tab active">All Tasks</button>
+            <button id="btn-filter-high" class="btn btn-tab">🔥 High Priority</button>
+            <button id="btn-filter-pending" class="btn btn-tab">⏳ Pending Only</button>
+            <button id="btn-filter-done" class="btn btn-tab">✓ Completed</button>
+          </div>
+        </div>
+
+        <!-- Transformation Actions (map()) -->
+        <div class="control-group">
+          <span class="control-label">Transform Data (map()):</span>
+          <div class="btn-group">
+            <button id="btn-uppercase" class="btn btn-outline">🔠 Uppercase Titles</button>
+            <button id="btn-reset-transform" class="btn btn-outline">🔄 Reset Text</button>
+          </div>
+        </div>
+
+        <!-- Search Box (filter + includes) -->
+        <div class="control-group search-group">
+          <input type="text" id="search-input" placeholder="🔍 Search tasks by title or tag..." />
+        </div>
+      </div>
+    </section>
+
+    <!-- Task List Display Section -->
+    <section class="card list-card">
+      <div class="card-header">
+        <h2>📋 Task Queue & Nested Data</h2>
+        <span id="task-count-badge" class="badge badge-blue">Showing 0 tasks</span>
+      </div>
+
+      <div id="task-list-container" class="task-list">
+        <!-- Dynamic Task Cards Injected Here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Ubaid Khalid • Trainer: Usama Qazi | 2-Month Internship Program</p>
+      <span class="footer-status">🟢 Fully Interactive Vanilla JS App</span>
+    </div>
+  </footer>
+
+  <script src="w3d3.js"></script>
+</body>
+</html>

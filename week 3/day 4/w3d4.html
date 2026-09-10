@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 Day 4 - Destructuring & Spread/Rest</title>
+  <link rel="stylesheet" href="w3d4.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>User Profile Manager</h2>
+    
+    <!-- Data Display Section -->
+    <div id="profile-card" class="card">
+      <h3 id="user-name">Loading...</h3>
+      <p id="user-role">Role: -</p>
+      <p id="user-location">Location: -</p>
+      <div id="skills-list" class="tags"></div>
+    </div>
+
+    <hr>
+
+    <!-- Interactive Inputs & Buttons -->
+    <div class="controls">
+      <input type="text" id="skill-input" placeholder="Enter new skill (e.g. React)">
+      <button id="add-skill-btn">Add Skill (Spread Op)</button>
+      <button id="show-contact-btn">Show Primary Contact (Array Destructuring)</button>
+      <button id="merge-stats-btn">Merge Extra Data (Object Spread)</button>
+    </div>
+
+    <!-- Output Console -->
+    <div id="log-box" class="log">Click any button to execute logic.</div>
+  </div>
+
+  <script src="w3d4.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevDash - Task & Code Analytics Workbench</title>
+  <link rel="stylesheet" href="w3d5.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <h1 class="logo-title">DevDash & Practice Suite</h1>
+        <span class="logo-sub">JavaScript Concepts & Task Hub</span>
+      </div>
+    </div>
+    <div class="user-profile">
+      <div class="avatar">UK</div>
+      <div class="user-info">
+        <span class="user-name">Ubaid Khalid</span>
+        <span class="user-role">Intern Developer</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Section: JS Arrow Functions & 'this' Binding Practice -->
+    <section class="card">
+      <div class="card-header">
+        <h2>🎯 JavaScript Practice: Arrow Functions & Scope</h2>
+        <span class="badge badge-accent">JS Core Practice</span>
+      </div>
+      
+      <div class="practice-grid">
+        <!-- 'this' binding test -->
+        <div class="practice-box">
+          <h3>1. Arrow vs Regular Function (<code>this</code> Binding)</h3>
+          <p class="card-desc">Click buttons to test how <code>this</code> behaves in both function types:</p>
+          <div class="btn-group">
+            <button id="btn-regular" class="btn btn-outline">Run Regular Function</button>
+            <button id="btn-arrow" class="btn btn-outline">Run Arrow Function</button>
+          </div>
+          <div id="output-this" class="display-box">Click a button...</div>
+        </div>
+
+        <!-- Refactoring math demo -->
+        <div class="practice-box">
+          <h3>2. Implicit Return & Tax Calculation</h3>
+          <p class="card-desc">Enter details to run single-line arrow functions:</p>
+          <div class="form-row">
+            <input type="text" id="user-name" placeholder="Enter name">
+            <input type="number" id="user-amount" placeholder="Enter amount ($)">
+          </div>
+          <button id="btn-calc" class="btn btn-primary btn-block">Process Bill</button>
+          <div id="output-refactor" class="display-box">Result will appear here...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Grid: Dashboard & Add Task Form -->
+    <div class="top-grid">
+
+      <!-- Analytics Dashboard -->
+      <section class="card analytics-card">
+        <div class="card-header">
+          <h2>📊 Real-Time Dashboard</h2>
+          <span class="badge badge-accent">Array.reduce & Computation</span>
+        </div>
+        <p class="card-desc">Metrics auto-update via Array reductions and object manipulation.</p>
+        
+        <div id="stats-container" class="stats-grid">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+
+      <!-- Task Form -->
+      <section class="card form-card">
+        <div class="card-header">
+          <h2>➕ Add New Task</h2>
+          <span class="badge badge-blue">Object Creation</span>
+        </div>
+        
+        <form id="add-task-form" class="task-form">
+          <div class="form-group">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" placeholder="e.g. Refactor array methods..." required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="high">🔥 High</option>
+                <option value="normal" selected>⚡ Normal</option>
+                <option value="low">🌱 Low</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="task-assignee">Assignee</label>
+              <select id="task-assignee">
+                <option value="Ubaid Khalid">Ubaid Khalid (Intern)</option>
+                <option value="Usama Qazi">Usama Qazi (Trainer)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="task-tags">Tags (Comma Separated)</label>
+            <input type="text" id="task-tags" placeholder="CSS, Media Queries, ES6" value="JS, Array" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Add Task to Data Array</button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- Array Controls -->
+    <section class="card controls-card">
+      <div class="card-header">
+        <h2>🛠️ Array Methods Workbench</h2>
+        <span class="badge badge-purple">Array Methods in Action</span>
+      </div>
+
+      <div class="controls-wrapper">
+        <div class="control-group">
+          <span class="control-label">Filter Tasks (<code>.filter()</code>):</span>
+          <div class="btn-group">
+            <button id="btn-filter-all" class="btn btn-tab active">All Tasks</button>
+            <button id="btn-filter-high" class="btn btn-tab">🔥 High Priority</button>
+            <button id="btn-filter-pending" class="btn btn-tab">⏳ Pending Only</button>
+            <button id="btn-filter-done" class="btn btn-tab">✓ Completed</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">Transform Data (<code>.map()</code>):</span>
+          <div class="btn-group">
+            <button id="btn-uppercase" class="btn btn-outline">🔠 Uppercase Titles</button>
+            <button id="btn-reset-transform" class="btn btn-outline">🔄 Reset Text</button>
+          </div>
+        </div>
+
+        <div class="control-group search-group">
+          <input type="text" id="search-input" placeholder="🔍 Search tasks by title or tag..." />
+        </div>
+      </div>
+    </section>
+
+    <!-- Task List -->
+    <section class="card list-card">
+      <div class="card-header">
+        <h2>📋 Task Queue & Nested Data</h2>
+        <span id="task-count-badge" class="badge badge-blue">Showing 0 tasks</span>
+      </div>
+
+      <div id="task-list-container" class="task-list">
+        <!-- Dynamic Task Cards Injected Here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Ubaid Khalid • Trainer: Usama Qazi | 2-Month Internship Program</p>
+      <span class="footer-status">🟢 Fully Interactive Vanilla JS App</span>
+    </div>
+  </footer>
+
+  <script src="w3d5.js"></script>
+</body>
+</html>

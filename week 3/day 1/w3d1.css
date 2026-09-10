@@ -1,0 +1,113 @@
+/* Base Styles & CSS Variables */
+:root {
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --primary-color: #2563eb;
+  --border-color: #e2e8f0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Header / Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 15px 30px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+/* Cards & Layout */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Wireframe Visualizer Grid */
+.wireframe-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.wireframe-box {
+  background-color: #e2e8f0;
+  border: 2px dashed #94a3b8;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wireframe-box.main-box {
+  padding: 40px;
+}
+
+/* Checklist Styling */
+.checklist-list {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.badge.complete { background-color: #dcfce7; color: #166534; }
+.badge.pending { background-color: #fef3c7; color: #92400e; }
+
+/* Buttons & Footer */
+.btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f172a;
+  color: #94a3b8;
+}
