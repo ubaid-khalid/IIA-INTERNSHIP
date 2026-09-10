@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions · Selectors · Switch</title>
+    <!-- separate CSS file -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="card" id="appContainer">
+        <h1>🧩 Conditions · Selectors · Switch</h1>
+        <div class="sub">if / else · else if · nested · switch · querySelector / querySelectorAll</div>
+
+        <div class="grid">
+            <!-- 1. if / else -->
+            <div class="block" id="blockIfElse">
+                <h2>① if / else <span>basic</span></h2>
+                <p style="font-size:0.9rem; margin-bottom:0.6rem; color:#1d4e6b;">🌡️ Temperature check</p>
+                <div class="btn-group">
+                    <button class="primary" data-temp="cold">❄️ Cold (10°C)</button>
+                    <button class="primary" data-temp="warm">☀️ Warm (25°C)</button>
+                </div>
+                <div class="output-box" id="outputIfElse">👉 Click a button</div>
+            </div>
+
+            <!-- 2. else-if / nested + selecting elements -->
+            <div class="block" id="blockElseIfNested">
+                <h2>② else if · nested <span>selector + nested</span></h2>
+                <p style="font-size:0.9rem; margin-bottom:0.4rem; color:#1d4e6b;">🎯 Score &amp; attendance</p>
+                <div class="flex-row">
+                    <div class="select-demo">
+                        <label>📊 Score:</label>
+                        <select id="scoreSelect">
+                            <option value="95">95 (A)</option>
+                            <option value="82">82 (B)</option>
+                            <option value="67">67 (C)</option>
+                            <option value="45">45 (D)</option>
+                        </select>
+                    </div>
+                    <div class="select-demo">
+                        <label>📅 Attendance:</label>
+                        <select id="attendanceSelect">
+                            <option value="90">90%</option>
+                            <option value="60">60%</option>
+                            <option value="30">30%</option>
+                        </select>
+                    </div>
+                    <button class="primary" id="evaluateNestedBtn">🔍 Evaluate</button>
+                </div>
+                <div class="output-box" id="outputElseIfNested">👉 Select values &amp; evaluate</div>
+            </div>
+
+            <!-- 3. switch statements -->
+            <div class="block" id="blockSwitch">
+                <h2>③ switch <span>multi-case</span></h2>
+                <p style="font-size:0.9rem; margin-bottom:0.4rem; color:#1d4e6b;">📱 Device / role</p>
+                <div class="btn-group">
+                    <button class="primary" data-device="admin">👑 Admin</button>
+                    <button class="primary" data-device="editor">✍️ Editor</button>
+                    <button class="primary" data-device="viewer">👀 Viewer</button>
+                    <button class="primary" data-device="guest">🚪 Guest</button>
+                </div>
+                <div class="output-box" id="outputSwitch">👉 Pick a role</div>
+            </div>
+
+            <!-- 4. querySelectorAll (multiple elements) -->
+            <div class="block" id="blockQSA">
+                <h2>④ querySelectorAll <span>multiple</span></h2>
+                <p style="font-size:0.9rem; margin-bottom:0.4rem; color:#1d4e6b;">📦 Select all .fruit-item</p>
+                <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.4rem 0 0.6rem;">
+                    <span class="fruit-item badge" data-fruit="apple">🍎 Apple</span>
+                    <span class="fruit-item badge" data-fruit="banana">🍌 Banana</span>
+                    <span class="fruit-item badge" data-fruit="cherry">🍒 Cherry</span>
+                    <span class="fruit-item badge" data-fruit="date">🌴 Date</span>
+                </div>
+                <div class="btn-group">
+                    <button class="primary" id="countFruitsBtn">📋 Count &amp; list fruits</button>
+                    <button id="highlightFruitsBtn">✨ Highlight all</button>
+                </div>
+                <div class="output-box" id="outputQSA">👉 Click to select multiple elements</div>
+            </div>
+        </div>
+        <div class="footnote">⚡ separate CSS + JS files · each block demonstrates a separate concept</div>
+    </div>
+
+    <!-- separate JavaScript file -->
+    <script src="scriptt.js"></script>
+</body>
+</html>         

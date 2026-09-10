@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Loops & Events · Professional Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="w2d3.css" />
+</head>
+<body>
+    <div class="app">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-left">
+                <h1>📊 loop · event · counter</h1>
+                <div class="tagline">while, do-while · array iterators · click & submit</div>
+            </div>
+            <div class="badge">professional · v3.0</div>
+        </div>
+
+        <!-- LOOP GRID -->
+        <div class="loop-grid">
+
+            <!-- WHILE & DO-WHILE -->
+            <div class="loop-card">
+                <div class="card-header">
+                    <span class="icon">🔄</span>
+                    <h2>while / do-while</h2>
+                    <span class="chip">iteration</span>
+                </div>
+                <div class="card-body">
+                    <div class="btn-cluster">
+                        <button class="btn btn-primary" id="whileBtn">▶ while (1–6)</button>
+                        <button class="btn btn-secondary" id="doWhileBtn">▶ do-while (1–6)</button>
+                    </div>
+                    <div class="output-panel" id="whileOutput">
+                        <span class="placeholder">click to execute</span>
+                    </div>
+                    <div class="btn-cluster" style="margin-top:0.5rem;">
+                        <button class="btn btn-outline" id="whileEvenBtn">⚡ even numbers</button>
+                        <button class="btn btn-outline" id="doWhileOddBtn">⚡ odd numbers</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARRAY LOOP - Professional Data -->
+            <div class="loop-card">
+                <div class="card-header">
+                    <span class="icon">📈</span>
+                    <h2>array loop</h2>
+                    <span class="chip">financial data</span>
+                </div>
+                <div class="card-body">
+                    <div class="btn-cluster">
+                        <button class="btn btn-primary" id="arrayForBtn">for</button>
+                        <button class="btn btn-secondary" id="arrayForEachBtn">forEach</button>
+                        <button class="btn btn-outline" id="arrayMapBtn">map</button>
+                    </div>
+                    <div class="output-panel" id="arrayOutput">
+                        <span class="placeholder">📊 Q1-Q4 revenue data</span>
+                    </div>
+                    <form id="submitForm" class="inline-form">
+                        <input type="text" id="submitInput" placeholder="add metric (e.g., Q5: 850k)" />
+                        <button type="submit" class="btn btn-primary">➕ submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- CLICK COUNTER -->
+        <div class="counter-section">
+            <div class="counter-info">
+                <span class="counter-label">👆 click counter</span>
+                <div class="counter-value">
+                    <span id="counterDisplay">0</span>
+                    <span class="counter-unit">clicks</span>
+                </div>
+            </div>
+            <div class="counter-actions">
+                <button class="btn btn-primary" id="clickBtn">➕ click me</button>
+                <button class="btn btn-secondary" id="resetCounterBtn">↺ reset</button>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            <span>⚡ all events bound with addEventListener · submit prevents reload</span>
+        </div>
+    </div>
+
+    <script src="w2d3.js"></script>
+</body>
+</html>
